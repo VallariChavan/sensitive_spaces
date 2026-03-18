@@ -315,7 +315,7 @@ function drawSoundscape() {
 
         // if the type is natural make is blue ---------------
         if (grid[i][j].type === "N") {
-          fill(0,0,255,15);
+          fill(0,0,255,18);
           square(x, y, sz);
         }
 
