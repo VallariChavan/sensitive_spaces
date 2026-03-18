@@ -45,8 +45,8 @@ let owl;
 
 function preload() {
   // load fonts
-  bitcount = loadFont("/assets/fonts/bitcount.ttf");
-  quicksand = loadFont("/assets/fonts/quicksand.ttf");
+  bitcount = loadFont("assets/fonts/bitcount.ttf");
+  quicksand = loadFont("assets/fonts/quicksand.ttf");
 
   for (let i = 1; i < 51; i++) {
     // load all the sound files
