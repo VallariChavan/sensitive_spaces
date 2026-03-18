@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+button{
+  background-color: #03FF00;
+  color: black;
+  padding: 10px 15px;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 10px;
+  font-size: 15px;
+  font: "Quicksand", sans-serif;;
+
+}
+
+button :active{
+  color: red;
+}
