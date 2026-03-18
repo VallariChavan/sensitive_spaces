@@ -37,16 +37,16 @@ let enterCreated = false;
 let endStart = 0;
 
 // fonts
-let bitcount;
-let quicksand;
+// let bitcount;
+// let quicksand;
 
 //image
 let owl;
 
 function preload() {
   // load fonts
-  bitcount = loadFont("assets/fonts/bitcount.ttf");
-  quicksand = loadFont("assets/fonts/quicksand.ttf");
+  // bitcount = loadFont("assets/fonts/bitcount.ttf");
+  // quicksand = loadFont("assets/fonts/quicksand.ttf");
 
   for (let i = 1; i < 51; i++) {
     // load all the sound files
@@ -152,22 +152,22 @@ function drawHomeScreen() {
 
   // add text
   //Title
-  textFont(quicksand);
+  textFont("Quicksand");
   textSize(100);
   textAlign(CENTER);
   textWrap(WORD);
   fill(120, 100,100);
-  text("SENSITIVE", width / 2, height / 3, 200);
-  textFont(bitcount);
+  text("SENSITIVE", width / 2, height / 3-80, 200);
+  textFont("Bitcount");
   fill(255);
-  text("SPACES", width / 2, height / 3 + 100, 200);
+  text("SPACES", width / 2, height / 3-80 + 100, 200);
   if (!enterCreated) {
     createEnter();
     enterCreated = true;
   }
 
   // Description
-  textFont(quicksand);
+  textFont("Quicksand");
   textSize(18);
   textWrap(WORD);
   text(
@@ -201,7 +201,7 @@ function drawEnd() {
 
   // format text
   rectMode(CENTER);
-  textFont(bitcount);
+  textFont("Bitcount");
   textSize(50);
   fill(0);
   rect(width / 2, height / 2, width, height);
@@ -242,7 +242,7 @@ function reloadScreen() {
 }
 // trigger the last line after the timer goes off
 function finalMessage() {
-  textFont(quicksand);
+  textFont("Quicksand");
   textWrap(WORD);
   textSize(30);
   text(
@@ -263,7 +263,7 @@ function drawSoundscape() {
   // title
   fill(255);
   stroke(2);
-  textFont(bitcount);
+  textFont("Bitcount");
   textSize(60);
   textAlign(CENTER);
   text("SENSITIVE SPACES", width / 2, 80);
@@ -272,28 +272,28 @@ function drawSoundscape() {
   rectMode(CORNER);
   let textX = cols * sz + sz;
   let textY = height / 3;
-  textFont(quicksand);
+  textFont("Quicksand");
   textSize(15);
   textAlign(LEFT);
   textWrap(WORD);
   text(
     "There are 5 sounds hidden in the soundscape that occur naturally in the environment. \n Find them to build a natural soundscape.",
-    textX,
+    textX-20,
     textY - 120,
     200,
   );
   text(
     "Instructions:\n 1. Scroll to change the focus range of the soundscape \n 2. Click to select the sounds that naturally belong in the environment and keep them playing. Click again if you want to switch the sound off but you might lose track of where the sound was! \n 3. To stop all sounds move out of the soundscape \n \n Hint: There are subtle differences in how the natural-sound carrying cells appear. ",
-    textX,
+    textX-20,
     textY + 50,
     200,
   );
-  textFont(bitcount);
+  textFont("Bitcount");
   fill(190, 90, 90, 100);
   stroke(255);
-  rect(textX - 20, textY + 400, 240, 80, 20);
+  rect(textX -40, textY + 400, 240, 80, 20);
   fill(255);
-  text("Sounds found: " + score + " / " + numNSounds, textX, textY + 430, 200);
+  text("Sounds found: " + score + " / " + numNSounds, textX-20, textY + 430, 200);
 
   // draw a grid to create the soundscape with
   for (let i = 0; i < cols; i++) {
@@ -315,7 +315,7 @@ function drawSoundscape() {
 
         // if the type is natural make is blue ---------------
         if (grid[i][j].type === "N") {
-          fill(0,0,255,10);
+          fill(0,0,255,15);
           square(x, y, sz);
         }
 
